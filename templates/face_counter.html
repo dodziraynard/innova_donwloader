@@ -6,48 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
     <title>FACE COUNTER</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .output {
-            margin: auto;
-            width: 600px;
-            height: 400px;
-            position: relative;
-        }
-
-        video,
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .fps {
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            margin: auto;
-            background-color: rgb(240, 240, 240);
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
-    <h1 class="text text-center">FACE COUNTER</h1>
-    <div class="fps">
-        <label for="fps" id="fps-label">FPS: 1</label>
+    <nav>
+        <h1 class="text text-center">FACE COUNTER</h1>
+    </nav>
+    <div class="alert alert-danger col-md-5 col-xs-10 col-sm-10 mx-auto" id="error-div">
+        <strong id="error-text" class="text text-center"></strong>
+    </div>
+    <div class="fps col-sm-10 col-xs-10 col-md-6">
+        <label for=" fps" id="fps-label">FPS: 1</label>
         <input type="range" id="fps" onchange="updateFPS(this)" min="1" max="60" value="1">
     </div>
-    <div class="output" width="600" height="400">
-        <video id="video" width="600" height="400" autoplay muted></video>
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+    <div class="output col-md-6 col-sm-11 col-xs-12">
+        <video id="video" class="col-md-12 col-sm-12 col-xs-12" autoplay muted></video>
+    </div>
+
+    <footer>
+        &copy; 2020, All Rights Reserved.
+        <a href="/">Learn More</a>
+    </footer>
+
     <script src="{% static 'js/face-api.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>

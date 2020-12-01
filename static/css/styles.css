@@ -1,1 +1,102 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #33ef;
+  color: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  font-family: cursive;
+}
+
+#error-div {
+  display: none;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.loading span {
+  height: 20px;
+  width: 20px;
+  background: blue;
+  margin: 5px;
+  -webkit-animation-name: load1;
+          animation-name: load1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 10px #ddd;
+          box-shadow: 0px 0px 10px #ddd;
+}
+
+.output {
+  margin: auto;
+  position: relative;
+}
+
+video,
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: relative;
+}
+
+footer {
+  background: #eee;
+  margin-top: 2vh;
+  text-align: center;
+  padding: 20px;
+}
+
+@-webkit-keyframes load1 {
+  0% {
+    background-color: #ffd900;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    background-color: #33ef;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes load1 {
+  0% {
+    background-color: #ffd900;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    background-color: #33ef;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
