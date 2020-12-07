@@ -28,8 +28,10 @@ function startVideo() {
 
 video.addEventListener("play", () => {
     loading.style.display = "flex";
-
     const canvas = faceapi.createCanvasFromMedia(video)
+    // video.width = video.videoWidth
+    // video.height = video.videoHeight
+
     const displaySize = { width: video.width, height: video.height }
     faceapi.matchDimensions(canvas, displaySize)
     document.querySelector(".output").append(canvas)
